@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">MarvelWiki</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <string name="nav_item_character">Personagens</string>
+    <string name="nav_item_comics">Revista</string>
+    <string name="nav_item_creator">Autores</string>
+    <string name="nav_item_events">Eventos</string>
+    <string name="nav_item_stories">Historia</string>
+    <string name="nav_item_exit">Sair</string>
+
+    <!-- navigation drawer item labels  -->
+    <string-array name="nav_drawer_labels">
+        <item>@string/nav_item_character</item>
+        <item>@string/nav_item_comics</item>
+        <item>@string/nav_item_creator</item>
+        <item>@string/nav_item_events</item>
+        <item>@string/nav_item_stories</item>
+        <item>@string/nav_item_exit</item>
+    </string-array>
+
+    <string name="title_messages">Messages</string>
+    <string name="title_friends">Friends</string>
+    <string name="title_home">Home</string>
+</resources>
