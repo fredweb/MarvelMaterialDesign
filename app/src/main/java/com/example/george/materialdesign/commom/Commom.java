@@ -66,8 +66,8 @@ public class Commom {
      * @param s  String to be hashed
      * @return
      */
-    public static final String md5(final String s) {
-        final String MD5 = "MD5";
+    public  String md5(String s) {
+        String MD5 = "MD5";
         try {
             // Create MD5 Hash
             MessageDigest digest = java.security.MessageDigest

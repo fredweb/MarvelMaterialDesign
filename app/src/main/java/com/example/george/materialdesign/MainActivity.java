@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.george.materialdesign.activity.CharacterList;
 import com.example.george.materialdesign.activity.FragmentDrawer;
 import com.example.george.materialdesign.activity.FriendsFragment;
 import com.example.george.materialdesign.activity.HomeFragment;
@@ -76,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         String title = getString(R.string.app_name);
         switch (position) {
             case 0:
-                fragment = new HomeFragment();
+                fragment = new CharacterList();
                 title = getString(R.string.title_home);
                 break;
             case 1:
