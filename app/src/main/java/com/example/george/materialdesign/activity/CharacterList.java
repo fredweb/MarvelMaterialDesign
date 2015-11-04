@@ -18,13 +18,21 @@ import com.example.george.materialdesign.R;
 import com.example.george.materialdesign.adapter.CustomListCharacterAdapter;
 import com.example.george.materialdesign.commom.AutorizeKey;
 import com.example.george.materialdesign.vo.Character;
+import com.example.george.materialdesign.vo.Data;
+import com.squareup.okhttp.Request;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit.Call;
+import retrofit.Retrofit;
+import retrofit.http.GET;
+import retrofit.http.Path;
 
 /**
  * Created by george on 28/10/15.
@@ -80,52 +88,10 @@ public class CharacterList extends Fragment {
         pDialog.show();
 
 
-        // Creating volley request obj
-        JsonArrayRequest movieReq = new JsonArrayRequest(url,
-                new Response.Listener<JSONArray>() {
-                    @Override
-                    public void onResponse(JSONArray response) {
-                        Log.d(TAG, response.toString());
-                        hidePDialog();
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(url)
+                .build();
 
-                        // Parsing json
-                        for (int i = 0; i < response.length(); i++) {
-                            try {
-
-                                JSONObject obj = response.getJSONObject(i);
-                                //Movie movie = new Movie();
-                                //movie.setTitle(obj.getString("title"));
-                                //movie.setYear(obj.getInt("releaseYear"));
-
-                                // Genre is json array
-                                //JSONArray genreArry = obj.getJSONArray("genre");
-                                //ArrayList<String> genre = new ArrayList<String>();
-                                //for (int j = 0; j < genreArry.length(); j++) {
-                                //   genre.add((String) genreArry.get(j));
-                                //}
-                                //movie.setGenre(genre);
-
-                                // adding movie to movies array
-                                //movieList.add(movie);
-
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-
-                        }
-
-                        // notifying list adapter about data changes
-                        // so that it renders the list view with updated data
-                        adapter.notifyDataSetChanged();
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                VolleyLog.d(TAG, "Error: " + error.getMessage());
-                hidePDialog();
-
-            }
-        });
 
         // Inflate the layout for this fragment
         return rootView;
@@ -140,5 +106,6 @@ public class CharacterList extends Fragment {
     public void onDetach() {
         super.onDetach();
     }
+
 
 }

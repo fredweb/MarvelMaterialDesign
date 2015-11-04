@@ -8,7 +8,7 @@ public class ResponseBody {
 	private String copyright;
 	private String attributionText;
 	private String attributionHTML;
-	private Dada data;
+	private Data data;
 	
 	public int getCode() {
 		return code;
@@ -44,11 +44,11 @@ public class ResponseBody {
 	public void setAttributionHTML(String attributionHTML) {
 		this.attributionHTML = attributionHTML;
 	}
-	public Dada getData() {
+	public Data getData() {
 		return data;
 	}
 	
-	public void setData(Dada data) {
+	public void setData(Data data) {
 		this.data = data;
 	}
 	
