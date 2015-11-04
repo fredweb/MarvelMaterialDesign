@@ -27,7 +27,7 @@ public class AutorizeKey
     }
 
 
-    private static final String urlBase = "http://gateway.marvel.com/";
+    private static final String urlBase = "http://gateway.marvel.com";
     private static final String publicKey = "0dbe24ffe58d6d1d5e5d15061d65a3df";
     private static final String privateKey = "a08ae314ca0a63d7eaeb5de468c9a8a1c98b4d4c";
     private Random gerador = new Random();
@@ -38,4 +38,20 @@ public class AutorizeKey
        String retorno = urlBase + "v1/public/characters?apikey="+publicKey+"&ts="+ts.toString()+"&hash="+ Commom.getInstance().md5(ts.toString()+privateKey+publicKey);
        return retorno;
    }
+
+    public String getUrlBase()
+    {
+        return urlBase;
+    }
+
+    public String getTimeStamp()
+    {
+        Integer ts = gerador.nextInt();
+        return ts.toString();
+    }
+
+    public String getkey(String t)
+    {
+        return "?apikey="+publicKey+"&ts="+t+"&hash="+ Commom.getInstance().md5(t+privateKey+publicKey);
+    }
 }

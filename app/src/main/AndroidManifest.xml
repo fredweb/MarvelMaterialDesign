@@ -29,5 +29,7 @@
 
     <permission android:name="android.permission.ACCESS_NETWORK_STATE"></permission>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <permission android:name="android.permission.INTERNET"></permission>
 
 </manifest>

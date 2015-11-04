@@ -10,15 +10,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.example.george.materialdesign.R;
 import com.example.george.materialdesign.adapter.CustomListCharacterAdapter;
 import com.example.george.materialdesign.commom.AutorizeKey;
 import com.example.george.materialdesign.vo.Character;
 import com.example.george.materialdesign.vo.Data;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.squareup.okhttp.Request;
 
 import org.json.JSONArray;
@@ -30,6 +28,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import retrofit.Call;
+import retrofit.Callback;
+import retrofit.GsonConverterFactory;
 import retrofit.Retrofit;
 import retrofit.http.GET;
 import retrofit.http.Path;
@@ -88,11 +88,39 @@ public class CharacterList extends Fragment {
         pDialog.show();
 
 
+        Gson gson = new GsonBuilder()
+                .setDateFormat("yyyy-MM-dd'T'HH:mm:ssZ")
+                .create();
+
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(url)
+                .baseUrl(AutorizeKey.getInstance().getUrlBase())
+                .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 
+        String ts = AutorizeKey.getInstance().getTimeStamp();
 
+        CharacterInterface objCharacter = retrofit.create(CharacterInterface.class);
+
+        Call<Data> call = objCharacter.getData(AutorizeKey.getInstance().getkey(ts),"10");
+        call.enqueue(new Callback<Data>() {
+            @Override
+            public void onResponse(retrofit.Response<Data> response, Retrofit retrofit) {
+                int statusCode = response.code();
+                Data data = response.body();
+                if(data != null)
+                {
+                    Log.i(TAG,data.getResults().toString());
+                }
+            }
+
+
+            @Override
+            public void onFailure(Throwable t) {
+                Log.i(TAG,"");
+            }
+        });
+
+        hidePDialog();
         // Inflate the layout for this fragment
         return rootView;
     }
@@ -107,5 +135,17 @@ public class CharacterList extends Fragment {
         super.onDetach();
     }
 
+
+    public interface CharacterInterface {
+        // Request method and URL specified in the annotation
+        // Callback for the parsed response is the last parameter
+
+        @GET("/v1/public/character{parametros}&limit={limites}")
+        Call<Data> getData(
+                @Path("parametros") String parametros,
+                @Path("limites") String limites
+        );
+
+    }
 
 }
