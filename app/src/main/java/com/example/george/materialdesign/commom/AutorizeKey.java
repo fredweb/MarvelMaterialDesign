@@ -52,6 +52,12 @@ public class AutorizeKey
 
     public String getkey(String t)
     {
-        return "?apikey="+publicKey+"&ts="+t+"&hash="+ Commom.getInstance().md5(t+privateKey+publicKey);
+        return Commom.getInstance().md5(t+privateKey+publicKey);
     }
+
+    public String getPublicKey()
+    {
+        return this.publicKey;
+    }
+
 }

@@ -1,4 +1,4 @@
-package com.example.george.materialdesign.vo;
+package com.example.george.materialdesign.model;
 
 /**
  * Created by george on 02/11/15.

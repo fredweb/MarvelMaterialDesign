@@ -1,8 +1,5 @@
 package com.example.george.materialdesign.adapter;
 
-import android.app.Activity;
-import android.content.Context;
-import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,9 +10,9 @@ import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
 import com.example.george.materialdesign.R;
 import com.example.george.materialdesign.app.AppController;
-import com.example.george.materialdesign.vo.Character;
-import com.example.george.materialdesign.vo.EnumPortrait;
-import com.example.george.materialdesign.vo.Thumbnail;
+import com.example.george.materialdesign.model.Character;
+import com.example.george.materialdesign.model.EnumPortrait;
+import com.example.george.materialdesign.model.Thumbnail;
 
 import java.util.List;
 
