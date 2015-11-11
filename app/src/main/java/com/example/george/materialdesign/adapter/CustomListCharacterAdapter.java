@@ -4,15 +4,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.android.volley.toolbox.ImageLoader;
-import com.android.volley.toolbox.NetworkImageView;
 import com.example.george.materialdesign.R;
-import com.example.george.materialdesign.app.AppController;
 import com.example.george.materialdesign.model.Character;
 import com.example.george.materialdesign.model.EnumPortrait;
 import com.example.george.materialdesign.model.Thumbnail;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -23,8 +22,6 @@ public class CustomListCharacterAdapter extends BaseAdapter {
 
     private LayoutInflater inflater;
     private List<Character> list;
-    private NetworkImageView thumbNail;
-    ImageLoader imagemLoader = AppController.getInstance().getImageLoader();
 
     public CustomListCharacterAdapter(List<Character> list, LayoutInflater inflater)
     {
@@ -52,22 +49,13 @@ public class CustomListCharacterAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-
-        if(imagemLoader == null)
-            imagemLoader = AppController.getInstance().getImageLoader();
-
-        thumbNail = (NetworkImageView) convertView.findViewById(R.id.thumbnail);
-
+        ImageView thumbNail = (ImageView) convertView.findViewById(R.id.thumbnail);
         TextView title = (TextView) convertView.findViewById(R.id.title);
         TextView modified = (TextView) convertView.findViewById(R.id.modified);
-
         Character c = list.get(position);
-
         Thumbnail image = (Thumbnail) c.getTumbnail();
-
-        thumbNail.setImageUrl(image.getPortrait(EnumPortrait.INCREBILE),imagemLoader);
+        Picasso.with(convertView.getContext()).load(image.getPortrait(EnumPortrait.INCREBILE)).resize(100,100).into(thumbNail);
         title.setText(c.getName());
-
         return convertView;
     }
 }

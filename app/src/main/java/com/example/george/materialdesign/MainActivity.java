@@ -17,7 +17,6 @@ import android.view.MenuItem;
 import com.example.george.materialdesign.activity.CharacterList;
 import com.example.george.materialdesign.activity.FragmentDrawer;
 import com.example.george.materialdesign.activity.FriendsFragment;
-import com.example.george.materialdesign.activity.HomeFragment;
 import com.example.george.materialdesign.activity.MessagesFragment;
 
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener {

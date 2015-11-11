@@ -1,6 +1,7 @@
 package com.example.george.materialdesign.Interface;
 
 import com.example.george.materialdesign.model.Character;
+import com.example.george.materialdesign.model.DataCharacter;
 
 import java.util.List;
 import java.util.Map;
@@ -19,14 +20,14 @@ public interface CharacterInterface {
         // Callback for the parsed response is the last parameter
 
         @GET("/v1/public/characters")
-        Call<List<Character>> getCharaters(
+        Call<DataCharacter> getCharaters(
                 @Query("ts") String ts,
                 @Query("apikey") String publicKey,
                 @Query("hash") String hash
         );
 
     @GET("/v1/public/characters/{characterId}")
-    Call<Character> getCharacterId(
+    Call<DataCharacter> getCharacterId(
             @Path("characterId") String characterId,
             @Query("ts") String ts,
             @Query("apikey") String publicKey,
