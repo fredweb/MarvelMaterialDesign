@@ -13,9 +13,9 @@ import java.lang.reflect.Type;
 /**
  * Created by george on 04/11/15.
  */
-public class CharacterDeserializer implements JsonDeserializer<DataCharacter> {
+public class CharacterDeserializer implements JsonDeserializer<Object> {
     @Override
-    public DataCharacter deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
+    public Object deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
 
         JsonElement character = json.getAsJsonObject();
         if(json.getAsJsonObject().get("data") != null)

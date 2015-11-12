@@ -86,7 +86,8 @@ public class CharacterList extends Fragment {
         String ts = AutorizeKey.getInstance().getTimeStamp();
         View rootView = inflater.inflate(R.layout.characterlist, container, false);
         listView = (ListView) rootView.findViewById(R.id.list);
-        adapter = new CustomListCharacterAdapter(movieList,inflater);
+        adapter = new CustomListCharacterAdapter(movieList,this.getContext());
+
         try {
 
             Gson gson = new GsonBuilder()
