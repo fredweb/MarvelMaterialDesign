@@ -1,17 +1,17 @@
 package com.example.george.materialdesign.deserialize;
 
-import com.example.george.materialdesign.model.Character;
+import android.util.Log;
 import com.example.george.materialdesign.model.DataCharacter;
 import com.google.gson.Gson;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
-import com.google.gson.reflect.TypeToken;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by george on 04/11/15.
@@ -22,14 +22,20 @@ public class CharacterDeserializer implements JsonDeserializer<Object> {
 
         JsonElement character = json.getAsJsonObject();
         DataCharacter retorno = new DataCharacter();
+        CharacterParsingJsonArrayToObject conversor = new CharacterParsingJsonArrayToObject();
 
         if(json.getAsJsonObject().get("data") != null)
         {
-            character =json.getAsJsonObject().get("data");
-            if(character.getAsJsonObject().get("results")!=null)
+            character = json.getAsJsonObject().get("data");
+            if(character.getAsJsonObject().get("results") != null)
             {
-                Type type = new TypeToken<ArrayList<Character>>() {}.getType();
-                return  new Gson().fromJson(character.getAsJsonObject().get("results"), type);
+                String str = character.getAsJsonObject().get("results").toString();
+                InputStream is = new ByteArrayInputStream(str.getBytes());
+                try {
+                    retorno.setResults(conversor.readJsonStream(is));
+                } catch (IOException e) {
+                    Log.i("ERRO",e.getMessage());
+                }
             }
         }
         return (retorno );

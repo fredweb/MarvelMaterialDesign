@@ -14,8 +14,7 @@ public class CharacterComics {
 	private int returned;
 	private String collectionURI;
 	private List<ItensURI> items;
-	
-	
+
 	public int getAvailable() {
 		return available;
 	}

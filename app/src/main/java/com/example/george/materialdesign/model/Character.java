@@ -19,7 +19,7 @@ public class Character {
 	private String modified;
 	private String resourceURI;
 	private List<Url> urls;
-	private List<Thumbnail> tumbnail;
+	private Thumbnail tumbnail;
 	private List<CharacterComics> comics;
 	private List<CharacterStories> stories;
 	private List<CharacterSeries> series;
@@ -61,10 +61,10 @@ public class Character {
 	public void setUrls(List<Url> urls) {
 		this.urls = urls;
 	}
-	public List<Thumbnail> getTumbnail() {
+	public Thumbnail getTumbnail() {
 		return tumbnail;
 	}
-	public void setTumbnail(List<Thumbnail> tumbnail) {
+	public void setTumbnail(Thumbnail tumbnail) {
 		this.tumbnail = tumbnail;
 	}
 	public List<CharacterComics> getComics() {

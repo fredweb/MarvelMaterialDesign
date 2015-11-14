@@ -19,7 +19,11 @@ public class Thumbnail {
 	public void setExtension(String extension) {
 		this.extension = extension;
 	}
-	
+
+	public String getImage()
+	{
+		return this.path + this.extension;
+	}
 
 	public String getPortrait(EnumPortrait tamanho)
 	{

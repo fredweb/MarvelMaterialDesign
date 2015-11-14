@@ -5,7 +5,16 @@ public class ItensURI {
 	private String resourceURI;
 	private String name;
 	private String role;
-	
+	private String type;
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
 	public String getResourceURI() {
 		return resourceURI;
 	}
