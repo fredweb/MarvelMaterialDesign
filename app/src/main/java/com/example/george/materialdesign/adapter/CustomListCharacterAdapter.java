@@ -62,13 +62,15 @@ public class CustomListCharacterAdapter extends BaseAdapter {
             row = inflater.inflate(R.layout.list_row, parent, false);
             if(list.get(position)!=null){
 
-            ImageView thumbNail = (ImageView) row.findViewById(R.id.thumbnail);
-            TextView title = (TextView) row.findViewById(R.id.title);
-            TextView modified = (TextView) row.findViewById(R.id.modified);
+                ImageView thumbNail = (ImageView) row.findViewById(R.id.thumbnail);
+                TextView title = (TextView) row.findViewById(R.id.title);
+                TextView modified = (TextView) row.findViewById(R.id.modified);
+                TextView id = (TextView) row.findViewById(R.id.IdNumber);
 
-            Thumbnail image = (Thumbnail)list.get(position).getTumbnail();
-            Picasso.with(row.getContext()).load(image.getPortrait(EnumPortrait.INCREBILE)).resize(100, 100).into(thumbNail);
-            title.setText(list.get(position).getName());
+                Thumbnail image = (Thumbnail)list.get(position).getTumbnail();
+                Picasso.with(row.getContext()).load(image.getPortrait(EnumPortrait.INCREBILE)).resize(100, 100).into(thumbNail);
+                title.setText(list.get(position).getName());
+                id.setText(list.get(position).getId());
             }
         }catch (Exception ex)
         {
