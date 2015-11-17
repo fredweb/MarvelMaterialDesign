@@ -108,9 +108,8 @@ public class CharacterList extends Fragment {
                     int statusCode = response.code();
                     DataCharacter data = response.body();
                     if (data != null) {
+
                         movieList.addAll(data.getResults());
-                        listView.setAdapter(adapter);
-                        adapter.notifyDataSetChanged();
                     }
                     hidePDialog();
                 }
@@ -120,6 +119,9 @@ public class CharacterList extends Fragment {
                     hidePDialog();
                 }
             });
+
+            listView.setAdapter(adapter);
+            adapter.notifyDataSetChanged();
         }catch (Exception E)
         {
             Log.i(TAG, E.getMessage());
