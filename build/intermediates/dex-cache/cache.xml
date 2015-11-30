@@ -2,46 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
-        <dex dex="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/pre-dexed/debug/classes-ee36d879b200bef2d9355dca907b333dd56e1e6b.jar" />
-    </item>
-    <item
-        jar="/home/george/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3.1/ecb6e1f8e4b0e84c4b886c2f14a1500caf309757/gson-2.3.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
-        <dex dex="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/pre-dexed/debug/gson-2.3.1-2f7232d7cbae40dcdd877589c0db67e51433919f.jar" />
-    </item>
-    <item
-        jar="/home/george/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
-        <dex dex="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.0-4a5457f24de6b1b75a350ec17a8f1d172120eca0.jar" />
-    </item>
-    <item
         jar="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
         <dex dex="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/pre-dexed/debug/classes-3bf528caa4735d4f51fdc64d03777ff3bb314104.jar" />
-    </item>
-    <item
-        jar="/home/george/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="98476622f10715998eacf9240d6b479f12c66143">
-        <dex dex="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/pre-dexed/debug/okio-1.6.0-ac8c9784b721c99093dd7484d47995e998b8ab90.jar" />
-    </item>
-    <item
-        jar="/home/george/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/retrofit/2.0.0-beta2/880d9e0997b2d1bfc98e0d121ced33ee5d04aac4/retrofit-2.0.0-beta2.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="880d9e0997b2d1bfc98e0d121ced33ee5d04aac4">
-        <dex dex="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/pre-dexed/debug/retrofit-2.0.0-beta2-885b2266b822ff0eec6592328c21ca036230c9e5.jar" />
     </item>
     <item
         jar="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
@@ -51,6 +16,13 @@
         <dex dex="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/pre-dexed/debug/classes-55bc6c06f42577cd2db59596d5a72cba9e1ee124.jar" />
     </item>
     <item
+        jar="/home/george/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/converter-gson/2.0.0-beta2/392c3d09e0f5e7087544093cc0cb23bb9c7af5fa/converter-gson-2.0.0-beta2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="392c3d09e0f5e7087544093cc0cb23bb9c7af5fa">
+        <dex dex="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/pre-dexed/debug/converter-gson-2.0.0-beta2-40c9a4db830c5cd02ebed3390daef5b15cd33509.jar" />
+    </item>
+    <item
         jar="/home/george/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.5.0/4de2b4ed3445c37ec1720a7d214712e845a24636/okhttp-2.5.0.jar"
         jumboMode="false"
         revision="23.0.1"
@@ -58,11 +30,18 @@
         <dex dex="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/pre-dexed/debug/okhttp-2.5.0-61589404c3cebc2e77b3ecf093c6fa2034a94207.jar" />
     </item>
     <item
-        jar="/home/george/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/converter-gson/2.0.0-beta2/392c3d09e0f5e7087544093cc0cb23bb9c7af5fa/converter-gson-2.0.0-beta2.jar"
+        jar="/home/george/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="392c3d09e0f5e7087544093cc0cb23bb9c7af5fa">
-        <dex dex="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/pre-dexed/debug/converter-gson-2.0.0-beta2-40c9a4db830c5cd02ebed3390daef5b15cd33509.jar" />
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.0-4a5457f24de6b1b75a350ec17a8f1d172120eca0.jar" />
+    </item>
+    <item
+        jar="/home/george/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/retrofit/2.0.0-beta2/880d9e0997b2d1bfc98e0d121ced33ee5d04aac4/retrofit-2.0.0-beta2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="880d9e0997b2d1bfc98e0d121ced33ee5d04aac4">
+        <dex dex="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/pre-dexed/debug/retrofit-2.0.0-beta2-885b2266b822ff0eec6592328c21ca036230c9e5.jar" />
     </item>
     <item
         jar="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
@@ -72,11 +51,18 @@
         <dex dex="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-9e794ae85e96cca0c5e3428e7dba9e2827d5d10e.jar" />
     </item>
     <item
-        jar="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/jars/classes.jar"
+        jar="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/exploded-aar/com.github.bluejamesbond/textjustify-android/2.1.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="19026d31f5d3ae868db81319671a642be5fbba08">
-        <dex dex="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/pre-dexed/debug/classes-f9afd1600e6fcce48a9b51794fde8c13802d54c5.jar" />
+        sha1="01d40085e187622594533159e2e21990edd60837">
+        <dex dex="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/pre-dexed/debug/classes-c31fda252e7c56e6634d8ed6c0657eaae0bec7ed.jar" />
+    </item>
+    <item
+        jar="/home/george/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3.1/ecb6e1f8e4b0e84c4b886c2f14a1500caf309757/gson-2.3.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/pre-dexed/debug/gson-2.3.1-2f7232d7cbae40dcdd877589c0db67e51433919f.jar" />
     </item>
     <item
         jar="/home/george/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
@@ -84,6 +70,27 @@
         revision="23.0.1"
         sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
         <dex dex="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/pre-dexed/debug/picasso-2.5.2-a19442178a297ae9347ef31e21fa00367d532b76.jar" />
+    </item>
+    <item
+        jar="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/pre-dexed/debug/classes-ee36d879b200bef2d9355dca907b333dd56e1e6b.jar" />
+    </item>
+    <item
+        jar="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="19026d31f5d3ae868db81319671a642be5fbba08">
+        <dex dex="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/pre-dexed/debug/classes-f9afd1600e6fcce48a9b51794fde8c13802d54c5.jar" />
+    </item>
+    <item
+        jar="/home/george/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/home/george/AndroidStudioProjects/MarvelMaterialDesign/app/build/intermediates/pre-dexed/debug/okio-1.6.0-ac8c9784b721c99093dd7484d47995e998b8ab90.jar" />
     </item>
 
 </items>

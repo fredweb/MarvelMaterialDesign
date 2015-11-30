@@ -26,5 +26,4 @@ dependencies {
     compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
     compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
     compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'com.github.bluejamesbond:textjustify-android:2.1.1'
 }

@@ -26,6 +26,14 @@ public interface CharacterInterface {
                 @Query("hash") String hash
         );
 
+    @GET("/v1/public/characters")
+    Call<DataCharacter> getCharatersByFirstName(
+            @Query("nameStartsWith") String firstName,
+            @Query("ts") String ts,
+            @Query("apikey") String publicKey,
+            @Query("hash") String hash
+    );
+
     @GET("/v1/public/characters/{characterId}")
     Call<DataCharacter> getCharacterId(
             @Path("characterId") String characterId,

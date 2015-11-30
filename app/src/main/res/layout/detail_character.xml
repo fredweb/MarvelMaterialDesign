@@ -3,63 +3,50 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
+
     <ImageView
-        android:id="@+id/detailCharacter"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/detailDescribleCharacter"
+        android:id="@+id/img_detail"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/id_detail_name"
+        android:layout_below="@+id/img_detail"
+        android:textColor="#525252"
+        android:textSize="@dimen/title"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descrição "
+        android:id="@+id/id_detail_label_descrition"
+        android:layout_marginTop="22dp"
+        android:textColor="#525252"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/id_detail_name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/id_detail_descrition"
+        android:layout_below="@+id/id_detail_label_descrition"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:padding="10dp"/>
-
-    <TextView
-        android:id="@+id/detailTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/detailCharacter"
-        android:textSize="@dimen/title"
-        android:textStyle="bold"
-        android:text="Nome"
-        android:padding="10dp"/>
-    <TextView
-        android:id="@+id/detailTitleCharacter"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/detailTitle"
-        android:textSize="@dimen/title"
-        android:textStyle="bold"
-        android:padding="10dp"/>
-
-    <TextView
-        android:id="@+id/detailCaracteristicas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/detailTitleCharacter"
-        android:textSize="@dimen/title"
-        android:textStyle="bold"
-        android:text="Caracteristica"
-        android:padding="10dp"/>
-
-    <com.bluejamesbond.text.DocumentView xmlns:ext="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-        android:id="@+id/detailDescribleCharacter"
-    ext:documentView_antialias="true"
-    ext:documentView_cacheConfig="auto_quality"
-    ext:documentView_hyphen="-"
-    ext:documentView_lineHeightMultiplier="2.0"
-    ext:documentView_offsetX="10dp"
-    ext:documentView_offsetY="10dp"
-    ext:documentView_insetPadding="10dp"
-    ext:documentView_insetPaddingBottom="10dp"
-    ext:documentView_insetPaddingLeft="10dp"
-    ext:documentView_insetPaddingRight="10dp"
-    ext:documentView_insetPaddingTop="10dp"
-    ext:documentView_reverse="false"
-    ext:documentView_textAlignment="justified"
-    ext:documentView_textColor="@color/genre"
-    ext:documentView_textFormat="formatted"
-    ext:documentView_textSize="12sp"
-    ext:documentView_textSubPixel="true"
-    ext:documentView_wordSpacingMultiplier="5.0" />
+        android:layout_marginTop="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="#525252" />
 </RelativeLayout>

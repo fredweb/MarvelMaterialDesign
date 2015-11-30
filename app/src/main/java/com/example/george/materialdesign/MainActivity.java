@@ -14,9 +14,11 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.george.materialdesign.activity.CharacterFilter;
 import com.example.george.materialdesign.activity.CharacterList;
 import com.example.george.materialdesign.activity.FragmentDrawer;
 import com.example.george.materialdesign.activity.FriendsFragment;
+import com.example.george.materialdesign.activity.Home;
 import com.example.george.materialdesign.activity.MessagesFragment;
 
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener {
@@ -76,12 +78,12 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         String title = getString(R.string.app_name);
         switch (position) {
             case 0:
-                fragment = new CharacterList();
+                fragment = new Home();
                 title = getString(R.string.title_home);
                 break;
             case 1:
-                fragment = new FriendsFragment();
-                title = getString(R.string.title_friends);
+                fragment = new CharacterFilter();
+                title = getString(R.string.title_filtrar_personagens);
                 break;
             case 2:
                 fragment = new MessagesFragment();
