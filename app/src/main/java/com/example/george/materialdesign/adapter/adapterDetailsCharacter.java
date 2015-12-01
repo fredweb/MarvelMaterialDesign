@@ -61,7 +61,7 @@ public class adapterDetailsCharacter extends BaseAdapter {
                 TextView descricao = (TextView) row.findViewById(R.id.id_detail_label_descrition);
 
                 Thumbnail image = (Thumbnail) (Thumbnail)list.get(position).getTumbnail();
-                Picasso.with(row.getContext()).load(image.getLandScape(EnumLandScape.XLARGE)).into(thumbNail);
+                Picasso.with(row.getContext()).load(image.getLandScape(EnumLandScape.INCREDIBLE)).into(thumbNail);
                 nameCharacter.setText(list.get(position).getName());
                 descricao.setText(list.get(position).getDescription());
             }
