@@ -9,14 +9,24 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.george.materialdesign.Interface.CharacterInterface;
 import com.example.george.materialdesign.R;
+import com.example.george.materialdesign.adapter.CustomListCharacterAdapter;
+import com.example.george.materialdesign.adapter.adapterDetailsCharacter;
 import com.example.george.materialdesign.commom.AutorizeKey;
 import com.example.george.materialdesign.deserialize.CharacterDeserializer;
-import com.example.george.materialdesign.model.DataCharacter;
+import com.example.george.materialdesign.model.*;
+import com.example.george.materialdesign.model.Character;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import retrofit.Call;
 import retrofit.Callback;
@@ -31,22 +41,16 @@ public class CharacterDetail extends Fragment {
     String firstName;
     private ProgressDialog pDialog;
     String ts = AutorizeKey.getInstance().getTimeStamp();
+    private View rootView;
+    private ListView listView;
+    private adapterDetailsCharacter adapter;
+    private List<Character> movieList = new ArrayList<Character>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Intent intent = getActivity().getIntent();
 
-        if(intent !=null)
-        {
-            Bundle b = intent.getExtras();
-            if(b!=null)
-            {
-                firstName = b.getString("FirstName");
-                montarDialogo();
-            }
-        }
 
     }
 
@@ -65,8 +69,20 @@ public class CharacterDetail extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.detail_character, container, false);
+        rootView = inflater.inflate(R.layout.list_character, container, false);
+        Intent intent = getActivity().getIntent();
+        if(intent !=null)
+        {
+            Bundle b = intent.getExtras();
+            if(b!=null)
+            {
+                firstName = b.getString("FirstName");
+                montarDialogo();
+            }
+        }
 
+        listView = (ListView) rootView.findViewById(R.id.list_detail);
+        adapter = new adapterDetailsCharacter(movieList,this.getContext());
         try
         {
             Gson gson = new GsonBuilder()
@@ -92,9 +108,14 @@ public class CharacterDetail extends Fragment {
                     DataCharacter data = response.body();
                     if (data != null) {
 
+                        movieList.addAll(data.getResults());
+                        listView.setAdapter(adapter);
+                        adapter.notifyDataSetChanged();
+                        hidePDialog();
                     }
-                    hidePDialog();
+
                 }
+
                 @Override
                 public void onFailure(Throwable t) {
                     Log.i("ERRO", t.getMessage());

@@ -24,6 +24,9 @@
             android:label="MarvelWiki">
             <action android:name="android.intent.action.MAIN" />
         </activity>
+        <activity android:name=".activity.main_character_detail"
+            android:label="MarvelWiki">
+        </activity>
     </application>
 
     <permission android:name="android.permission.ACCESS_NETWORK_STATE"></permission>
